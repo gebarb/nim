@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="nim.Gameplay">
+
+    <Button
+        android:id="@+id/quitButton"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        android:onClick="backToHome"
+        android:text="Quit Game"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/sdButton" />
+
+    <Button
+        android:id="@+id/sdButton"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:onClick="waitTime"
+        android:text="Slow Down"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/quitButton"
+        app:layout_constraintHorizontal_bias="0.366"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/removeButton"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:onClick="remove"
+        android:text="Remove"
+        app:layout_constraintBottom_toTopOf="@+id/quitButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <nim.GamePiece
+        android:id="@+id/gp1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/circle"
+        android:minWidth="1dp"
+        android:onClick="select"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <nim.GamePiece
+        android:id="@+id/gp21"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/circle"
+        android:minWidth="2dp"
+        android:onClick="select"
+        app:layout_constraintEnd_toEndOf="@+id/gp1"
+        app:layout_constraintTop_toBottomOf="@+id/gp1"
+        android:layout_marginRight="24dp" />
+
+    <nim.GamePiece
+        android:id="@+id/gp22"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/circle"
+        android:minWidth="2dp"
+        android:onClick="select"
+        app:layout_constraintStart_toStartOf="@+id/gp1"
+        app:layout_constraintTop_toBottomOf="@+id/gp1"
+        android:layout_marginLeft="24dp" />
+
+    <nim.GamePiece
+        android:id="@+id/gp31"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/circle"
+        android:minWidth="3dp"
+        android:onClick="select"
+        app:layout_constraintEnd_toEndOf="@+id/gp21"
+        app:layout_constraintTop_toBottomOf="@+id/gp21"
+        android:layout_marginRight="24dp" />
+
+    <nim.GamePiece
+        android:id="@+id/gp32"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/circle"
+        android:minWidth="3dp"
+        android:onClick="select"
+        app:layout_constraintEnd_toEndOf="@+id/gp22"
+        app:layout_constraintTop_toBottomOf="@+id/gp22"
+        android:layout_marginRight="24dp" />
+
+    <nim.GamePiece
+        android:id="@+id/gp33"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/circle"
+        android:minWidth="3dp"
+        android:onClick="select"
+        app:layout_constraintStart_toStartOf="@+id/gp22"
+        app:layout_constraintTop_toBottomOf="@+id/gp22"
+        android:layout_marginLeft="24dp" />
+
+    <nim.GamePiece
+        android:id="@+id/gp41"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/circle"
+        android:minWidth="4dp"
+        android:onClick="select"
+        app:layout_constraintEnd_toEndOf="@+id/gp31"
+        app:layout_constraintTop_toBottomOf="@+id/gp31"
+        android:layout_marginRight="24dp" />
+
+    <nim.GamePiece
+        android:id="@+id/gp42"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/circle"
+        android:minWidth="4dp"
+        android:onClick="select"
+        app:layout_constraintEnd_toEndOf="@+id/gp32"
+        app:layout_constraintTop_toBottomOf="@+id/gp32"
+        android:layout_marginRight="24dp" />
+
+    <nim.GamePiece
+        android:id="@+id/gp43"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/circle"
+        android:minWidth="4dp"
+        android:onClick="select"
+        app:layout_constraintStart_toStartOf="@+id/gp32"
+        app:layout_constraintTop_toBottomOf="@+id/gp32"
+        android:layout_marginLeft="24dp" />
+
+    <nim.GamePiece
+        android:id="@+id/gp44"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/circle"
+        android:minWidth="4dp"
+        android:onClick="select"
+        app:layout_constraintStart_toStartOf="@+id/gp33"
+        app:layout_constraintTop_toBottomOf="@+id/gp33"
+        android:layout_marginLeft="24dp" />
+
+    <nim.GamePiece
+        android:id="@+id/gp51"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/circle"
+        android:minWidth="5dp"
+        android:onClick="select"
+        app:layout_constraintEnd_toEndOf="@+id/gp41"
+        app:layout_constraintTop_toBottomOf="@+id/gp41"
+        android:layout_marginRight="24dp" />
+
+    <nim.GamePiece
+        android:id="@+id/gp52"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/circle"
+        android:minWidth="5dp"
+        android:onClick="select"
+        app:layout_constraintEnd_toEndOf="@+id/gp42"
+        app:layout_constraintTop_toBottomOf="@+id/gp42"
+        android:layout_marginRight="24dp" />
+
+    <nim.GamePiece
+        android:id="@+id/gp53"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/circle"
+        android:minWidth="5dp"
+        android:onClick="select"
+        app:layout_constraintEnd_toEndOf="@+id/gp43"
+        app:layout_constraintTop_toBottomOf="@+id/gp43"
+        android:layout_marginRight="24dp" />
+
+    <nim.GamePiece
+        android:id="@+id/gp54"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/circle"
+        android:minWidth="5dp"
+        android:onClick="select"
+        app:layout_constraintStart_toStartOf="@+id/gp43"
+        app:layout_constraintTop_toBottomOf="@+id/gp43"
+        android:layout_marginLeft="24dp" />
+
+    <nim.GamePiece
+        android:id="@+id/gp55"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/circle"
+        android:minWidth="5dp"
+        android:onClick="select"
+        app:layout_constraintStart_toStartOf="@+id/gp44"
+        app:layout_constraintTop_toBottomOf="@+id/gp44"
+        android:layout_marginLeft="24dp" />
+
+    <nim.GamePiece
+        android:id="@+id/gp61"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/circle"
+        android:minWidth="6dp"
+        android:onClick="select"
+        app:layout_constraintEnd_toEndOf="@+id/gp51"
+        app:layout_constraintTop_toBottomOf="@+id/gp51"
+        android:layout_marginRight="24dp" />
+
+    <nim.GamePiece
+        android:id="@+id/gp62"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/circle"
+        android:minWidth="6dp"
+        android:onClick="select"
+        app:layout_constraintEnd_toEndOf="@+id/gp52"
+        app:layout_constraintTop_toBottomOf="@+id/gp52"
+        android:layout_marginRight="24dp" />
+
+    <nim.GamePiece
+        android:id="@+id/gp63"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/circle"
+        android:minWidth="6dp"
+        android:onClick="select"
+        app:layout_constraintEnd_toEndOf="@+id/gp53"
+        app:layout_constraintTop_toBottomOf="@+id/gp53"
+        android:layout_marginRight="24dp" />
+
+    <nim.GamePiece
+        android:id="@+id/gp64"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/circle"
+        android:minWidth="6dp"
+        android:onClick="select"
+        app:layout_constraintStart_toStartOf="@+id/gp53"
+        app:layout_constraintTop_toBottomOf="@+id/gp53"
+        android:layout_marginLeft="24dp" />
+
+    <nim.GamePiece
+        android:id="@+id/gp65"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/circle"
+        android:minWidth="6dp"
+        android:onClick="select"
+        app:layout_constraintStart_toStartOf="@+id/gp54"
+        app:layout_constraintTop_toBottomOf="@+id/gp54"
+        android:layout_marginLeft="24dp" />
+
+    <nim.GamePiece
+        android:id="@+id/gp66"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/circle"
+        android:minWidth="6dp"
+        android:onClick="select"
+        app:layout_constraintStart_toStartOf="@+id/gp55"
+        app:layout_constraintTop_toBottomOf="@+id/gp55"
+        android:layout_marginLeft="24dp" />
+
+    <nim.GamePiece
+        android:id="@+id/gp71"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/circle"
+        android:minWidth="7dp"
+        android:onClick="select"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/gp61"
+        app:layout_constraintTop_toBottomOf="@+id/gp61"
+        android:layout_marginRight="24dp" />
+
+    <nim.GamePiece
+        android:id="@+id/gp72"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/circle"
+        android:minWidth="7dp"
+        android:onClick="select"
+        app:layout_constraintEnd_toEndOf="@+id/gp62"
+        app:layout_constraintTop_toBottomOf="@+id/gp62" />
+
+    <nim.GamePiece
+        android:id="@+id/gp73"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/circle"
+        android:minWidth="7dp"
+        android:onClick="select"
+        app:layout_constraintEnd_toEndOf="@+id/gp63"
+        app:layout_constraintTop_toBottomOf="@+id/gp63"
+        android:layout_marginRight="24dp" />
+
+    <nim.GamePiece
+        android:id="@+id/gp74"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/circle"
+        android:minWidth="7dp"
+        android:onClick="select"
+        app:layout_constraintEnd_toEndOf="@+id/gp64"
+        app:layout_constraintTop_toBottomOf="@+id/gp64"
+        android:layout_marginRight="24dp" />
+
+    <nim.GamePiece
+        android:id="@+id/gp75"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/circle"
+        android:minWidth="7dp"
+        android:onClick="select"
+        app:layout_constraintStart_toStartOf="@+id/gp64"
+        app:layout_constraintTop_toBottomOf="@+id/gp64"
+        android:layout_marginLeft="24dp" />
+
+    <nim.GamePiece
+        android:id="@+id/gp76"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/circle"
+        android:minWidth="7dp"
+        android:onClick="select"
+        app:layout_constraintStart_toStartOf="@+id/gp65"
+        app:layout_constraintTop_toBottomOf="@+id/gp65"
+        android:layout_marginLeft="24dp" />
+
+    <nim.GamePiece
+        android:id="@+id/gp77"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/circle"
+        android:minWidth="7dp"
+        android:onClick="select"
+        app:layout_constraintStart_toStartOf="@+id/gp66"
+        app:layout_constraintTop_toBottomOf="@+id/gp66" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
